@@ -1,17 +1,21 @@
 #!/usr/bin/python3
+""" define a class Square """
+
+
 class Square:
-
-    """ Class Square that defines methods and attributes for a square object"""
-
+    """ define __init__ function """
     def __init__(self, size=0):
-        """ Class Constructor """
-        if not isinstance(size, int):
+        """ if statement """
+        if type(size) is not int:
+            """ raise error """
             raise TypeError("size must be an integer")
         elif size < 0:
+            """ raise error """
             raise ValueError("size must be >= 0")
         else:
+            """ initialize """
             self.__size = size
-
+    """ defines area function """
     def area(self):
-        """ Method that calculates current square area """
-        return (self.__size * self.__size)
+        """ returns area """
+        return self.__size ** 2
