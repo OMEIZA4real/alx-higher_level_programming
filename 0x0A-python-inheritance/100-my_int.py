@@ -1,15 +1,22 @@
 #!/usr/bin/python3
-
-""" Class that inherits from int """
+"""
+100-my_int module
+"""
 
 
 class MyInt(int):
-    """ Class int rebel == and != are inverted"""
-
+    """
+    Class inheriting from int,
+    But reverses the behavior of != and ==.
+    """
     def __eq__(self, other):
-        """ Super Call to Not Equal """
+        """
+        Equality becomes inequality.
+        """
         return super().__ne__(other)
 
     def __ne__(self, other):
-        """ Super Call to Equal """
+        """
+        Inequality becomes equality.
+        """
         return super().__eq__(other)
